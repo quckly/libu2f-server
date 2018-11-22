@@ -2,7 +2,7 @@ Yubico Universal 2nd Factor (U2F) Server C Library
 ==================================================
 
 image:https://img.shields.io/badge/License-BSD%202--Clause-orange.svg["License, link=https://opensource.org/licenses/BSD-2-Clause"]
-image:https://travis-ci.org/Yubico/libu2f-server.svg?branch=master["Build Status", link="https://travis-ci.org/Yubico/libu2f-server"]
+image:https://travis-ci.org/Yubico/libu2f-server.svg?branch=master["Build Status", link="https://travis-ci.org/wavvs/libu2f-server"]
 image:https://coveralls.io/repos/Yubico/libu2f-server/badge.svg?branch=master["Coverage Status", link="https://coveralls.io/r/Yubico/libu2f-server?branch=master"]
 image:https://scan.coverity.com/projects/5685/badge.svg["Coverity Status", link=https://scan.coverity.com/projects/5685]
 
@@ -167,17 +167,17 @@ Autotools are required, this includes `autoconf`, `automake` and `libtool`,
 
 Debian:
 -----------
-  # apt-get install check gengetopt help2man libssl-dev libjson-c-dev
+  # apt-get install check gengetopt help2man libssl-dev libjansson-dev
 -----------
 
 RHEL:
 -----------
-  # yum install check-devel gengetopt help2man openssl-devel json-c-devel
+  # yum install check-devel gengetopt help2man openssl-devel libjansson-devel
 -----------
 
 macOS:
 -----------
-  $ brew install check gengetopt help2man json-c openssl pkg-config
+  $ brew install check gengetopt help2man libjansson openssl pkg-config
   $ export PKG_CONFIG_PATH=$(brew --prefix openssl)/lib/pkgconfig
 -----------
 

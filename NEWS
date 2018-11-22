@@ -1,6 +1,7 @@
 libu2f-server NEWS -- History of user-visible changes.          -*- outline -*-
 
 * Version 1.1.1 (unreleased)
+ ** Replace json-c library with jansson.
 
 * Version 1.1.0 (released 2018-01-04)
  ** Add the possibility to dump the attestation certificate.

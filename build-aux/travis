@@ -5,10 +5,10 @@ env | sort
 if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then
   sudo apt-get update -qq
   sudo apt-get autoremove -qq
-  sudo apt-get install -qq -y gengetopt help2man libjson0-dev libssl-dev check lcov
+  sudo apt-get install -qq -y gengetopt help2man libjansson-dev libssl-dev check lcov
 elif [[ "$TRAVIS_OS_NAME" == "osx" ]]; then
   brew update
-  brew install gengetopt help2man pkg-config json-c openssl check
+  brew install gengetopt help2man pkg-config jansson openssl check
   export PKG_CONFIG_PATH=/usr/local/opt/openssl/lib/pkgconfig
 else
   echo "Unsupported OS: $TRAVIS_OS_NAME"

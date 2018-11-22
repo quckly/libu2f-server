@@ -60,17 +60,9 @@ fi
 
 gl_LD_VERSION_SCRIPT
 
-PKG_CHECK_MODULES([LIBJSON], [json-c], [], [
-  PKG_CHECK_MODULES([LIBJSON], [json])])
-
-# Check for json_object_object_get_ext
-am_save_CFLAGS="$CFLAGS"
-am_save_LIBS="$LIBS"
-CFLAGS="$CFLAGS $LIBJSON_CFLAGS"
-LIBS="$LIBS $LIBJSON_LIBS"
-AC_CHECK_FUNCS([json_object_object_get_ex])
-CFLAGS=$am_save_CFLAGS
-LIBS=$am_save_LIBS
+PKG_CHECK_MODULES([LIBJANSSON], [jansson], [], [])
+CFLAGS="$CFLAGS $LIBJANSSON_CFLAGS"
+LIBS="$LIBS $LIBJANSSON_LIBS"
 
 PKG_CHECK_MODULES([LIBSSL], [libssl], [], [])
 
@@ -165,8 +157,8 @@ AC_MSG_NOTICE([summary of build options:
   Static library:   ${enable_static}
   CFLAGS:           ${CFLAGS}
   CPPFLAGS:         ${CPPFLAGS}
-  JSON CFLAGS:      $LIBJSON_CFLAGS
-  JSON LIBS:        $LIBJSON_LIBS
+  JSON CFLAGS:      $LIBJANSSON_CFLAGS
+  JSON LIBS:        $LIBJANSSON_LIBS
   OPENSSL CFLAGS:   $LIBSSL_CFLAGS
   OPENSSL LIBS:     $LIBSSL_LIBS
   LIBCRYPTO CFLAGS: $LIBCRYPTO_CFLAGS
